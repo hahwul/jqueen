@@ -20,6 +20,7 @@ import (
 	"github.com/spf13/cobra"
 	"os"
 
+	printing "github.com/hahwul/jqueen/pkg/printing"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
 )
@@ -43,6 +44,7 @@ func Execute() {
 }
 
 func init() {
+	printing.Banner()
 	cobra.OnInitialize(initConfig)
 
 	// Here you will define your flags and configuration settings.

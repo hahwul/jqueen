@@ -5,7 +5,8 @@ import (
 	"os"
 )
 
-func banner(){
+// Banner is show banner
+func Banner(){
 	fmt.Fprintln(os.Stderr, "   __    ____                                *")
 	fmt.Fprintln(os.Stderr, "   \\ \\  /___ \\_   _  ___  ___ _ __         * | *")
 	fmt.Fprintln(os.Stderr, "    \\ \\//  / / | | |/ _ \\/ _ \\ '_ \\       * \\|/ *")
