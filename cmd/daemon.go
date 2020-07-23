@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	. "github.com/hahwul/jqueen/pkg/daemon"
 )
 
 // daemonCmd represents the daemon command
@@ -12,6 +13,7 @@ var daemonCmd = &cobra.Command{
 	Short: "managing jqueen daemon",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("daemon called")
+		RunDaemon()	
 	},
 }
 
