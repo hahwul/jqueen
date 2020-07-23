@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/echo"
-	"github.com/hahwul/jqueen/pkg/job"
+	job "github.com/hahwul/jqueen/pkg/job"
 )
 
 // RunDaemon is start rest api server
 func RunDaemon() {
-	var queue *JobQueue = New()
+	var queue *job.JobQueue = job.New()
 	_= queue
 	e := echo.New()
 	e.Use(middleware.SecureWithConfig(middleware.SecureConfig{
