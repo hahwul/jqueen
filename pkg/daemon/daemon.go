@@ -3,7 +3,6 @@ package daemon
 import (
 	"net/http"
 
-	"github.com/hahwul/jqueen/pkg/daemon"
 	job "github.com/hahwul/jqueen/pkg/job"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
