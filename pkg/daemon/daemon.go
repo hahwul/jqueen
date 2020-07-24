@@ -2,9 +2,11 @@ package daemon
 
 import (
 	"net/http"
-	"github.com/labstack/echo/middleware"
-	"github.com/labstack/echo"
+
+	"github.com/hahwul/jqueen/pkg/daemon"
 	job "github.com/hahwul/jqueen/pkg/job"
+	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 )
 
 // RunDaemon is start rest api server
@@ -22,5 +24,12 @@ func RunDaemon() {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "jqueen")
 	})
+
+	e.GET("/add", func(c echo.Context) error {
+		return daemon.AddJob(c, queue)		
+	})
+
+
+
 	e.Logger.Fatal(e.Start(":6886")) 
 }
