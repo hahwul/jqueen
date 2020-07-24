@@ -1,8 +1,5 @@
 package job
 
-import (
-	"fmt"
-)
 
 //Job is struct of job
 type Job struct{
