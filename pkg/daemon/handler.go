@@ -32,3 +32,23 @@ func AddJob(c echo.Context, jq *job.JobQueue) error {
 	}
 	return c.JSON(http.StatusOK,r)
 }
+
+// GetJobList is show queue
+func GetJobList(c echo.Context, jq *job.JobQueue) error {
+	r := &Return{
+		Code: 0,
+		JobID: "1",
+	}
+	return c.JSON(http.StatusOK,r)
+
+}
+
+// GetJob is show datail of job
+func GetJob(c echo.Context, jq *job.JobQueue) error {
+	r := &Return{
+		Code: 0,
+		JobID: "1",
+	}
+	return c.JSON(http.StatusOK,r)
+
+}
