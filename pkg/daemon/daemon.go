@@ -25,7 +25,7 @@ func RunDaemon() {
 	})
 
 	e.GET("/add", func(c echo.Context) error {
-		return daemon.AddJob(c, queue)		
+		return AddJob(c, queue)		
 	})
 
 
