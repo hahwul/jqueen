@@ -6,13 +6,13 @@ import (
 
 //Job is struct of job
 type Job struct{
-	id       string
-	pid      int
-	cmd      string
-	name     string
-	desc     string
-	priority int
-	flags    []string
+	ID       string
+	PID      int
+	CMD      string
+	Name     string
+	Desc     string
+	Priority int
+	Flags    []string
 }
 
 // JobQueueItem is struct of QueueItem
@@ -66,6 +66,7 @@ func (queue *JobQueue) Dequeue() interface{} {
 }
 
 // TestFunction is only testing function
+/*
 func TestFunction(){
 	var queue *JobQueue = New()
 	job := new(Job)
@@ -82,3 +83,4 @@ func TestFunction(){
 	}
 
 }
+*/
