@@ -15,6 +15,7 @@ type Return struct {
 	JobID string `json:"jobid"`
 }
 
+// AddJob is add job
 func AddJob(c echo.Context, jq *job.JobQueue) error {
 	// Make JobID
 	t := time.Now()
